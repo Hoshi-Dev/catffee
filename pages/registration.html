@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- fontawsome -->
+    <script
+      src="https://kit.fontawesome.com/34bac4efbb.js"
+      crossorigin="anonymous"></script>
+    <title>catffee || Café de especialidad</title>
+  </head>
+
+  <body class="body__grid">
+    <!--------------------------------------------------- HEADER --------------------------------------------------------->
+    <header class="header">
+      <div class="header__logo">
+        <h1><a href="/index.html">catffee</a></h1>
+
+        <i class="fa-solid fa-bars" id="js-menu-btn" aria-hidden="false"></i>
+      </div>
+
+      <nav class="header__nav" id="js-header__nav">
+        <ul class="header__nav__list">
+          <li class="header__nav__list__item"><a href="">Sobre nosotros</a></li>
+          <li class="header__nav__list__item"><a href="">Menú</a></li>
+          <li class="header__nav__list__item">
+            <a href="">Las estrellas de catffee</a>
+          </li>
+          <li class="header__nav__list__item"><a href="">Iniciar Sesión</a></li>
+          <li class="header__nav__list__item">
+            <button href="" class="btn">Registrarse</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--------------------------------------------------- MAIN REGISTRATION --------------------------------------------------------->
+    <main class="main">
+      <section class="main__registration">
+        <form action="" class="main__registration__form">
+          <h2 class="main__registration__form__title">registro</h2>
+
+          <fieldset>
+            <legend><label for="name">nombre</label></legend>
+            <input
+              class="main__registration__form__input"
+              type="text"
+              id="name"
+              name="name"
+              required />
+          </fieldset>
+
+          <fieldset>
+            <legend><label for="lastname">apellido</label></legend>
+            <input
+              class="main__registration__form__input"
+              type="text"
+              id="lastname"
+              name="lastname"
+              required />
+          </fieldset>
+
+          <fieldset>
+            <legend><label for="email">email</label></legend>
+            <input
+              class="main__registration__form__input"
+              type="email"
+              name="email"
+              id="email"
+              required />
+          </fieldset>
+
+          <fieldset>
+            <legend><label for="password">contraseña</label></legend>
+            <input
+              class="main__registration__form__input"
+              type="password"
+              name="password"
+              id="password"
+              required />
+          </fieldset>
+
+          <fieldset>
+            <legend><label for="date">fecha de nacimiento</label></legend>
+            <input
+              class="main__registration__form__input"
+              type="date"
+              name="date"
+              id="date"
+              required />
+          </fieldset>
+
+          <fieldset>
+            <legend><label for="pais">país</label></legend>
+            <select
+              class="main__registration__form__input"
+              name="pais"
+              id="pais"
+              required>
+              <option value="" disabled selected>Selecciona un país</option>
+              <option value="AR">Argentina</option>
+              <option value="BO">Bolivia</option>
+              <option value="BR">Brasil</option>
+              <option value="CH">Chile</option>
+              <option value="CO">Colombia</option>
+              <option value="EC">Ecuador</option>
+              <option value="PY">Paraguay</option>
+              <option value="PE">Perú</option>
+              <option value="UY">Uruguay</option>
+              <option value="VE">Venezuela</option>
+            </select>
+          </fieldset>
+
+          <div></div>
+          <div>
+            <input type="checkbox" name="terms" id="terms" />
+            <label for="terms">Acepto terminos y condiciones</label>
+            <div></div>
+          </div>
+          
+          <input type="submit" value="Registrarse" class="main__registration__form__btn btn"/>
+         
+          <div class="main__registration__form__help">
+            <a href="">¿Necesitas ayuda?</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!--------------------------------------------------- FOOTER --------------------------------------------------------->
+    <footer class="footer">
+      <a class="footer__logo">
+        <h3>catffee</h3>
+      </a>
+
+      <nav class="footer__nav">
+        <ul class="footer__nav__list">
+          <li class="footer__nav__list__item"><a href="">Adopciones</a></li>
+          <li class="footer__nav__list__item">
+            <a href="">Preguntas frecuentes</a>
+          </li>
+          <li class="footer__nav__list__item"><a href="">Ayuda</a></li>
+          <li class="footer__nav__list__item">
+            <button href="" class="btn">Administrador Gatos</button>
+          </li>
+        </ul>
+      </nav>
+
+      <a href=""><i class="fa-regular fa-circle-up"></i></a>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
