@@ -431,6 +431,11 @@ label {
 }
 .error-text {
   color: #f2f2f2;
+  font-size: 0.8rem;
+}
+#terms-conditions > .error-text {
+  background-color: var(--acent-color);
+  border-radius: 0 8px 0 8px;
 }
 .main__registration__form,
 .main__login__form {

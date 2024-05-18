@@ -28,7 +28,9 @@
           <li class="header__nav__list__item">
             <a href="">Las estrellas de catffee</a>
           </li>
-          <li class="header__nav__list__item"><a href="login.html">Iniciar Sesión</a></li>
+          <li class="header__nav__list__item">
+            <a href="login.html">Iniciar Sesión</a>
+          </li>
           <li class="header__nav__list__item">
             <button href="" class="btn">Registrarse</button>
           </li>
@@ -48,8 +50,8 @@
               class="main__registration__form__input"
               type="text"
               id="name"
-              name="name"
-              required />
+              name="name" />
+            <div class="error-text"></div>
           </fieldset>
 
           <fieldset>
@@ -58,8 +60,8 @@
               class="main__registration__form__input"
               type="text"
               id="lastname"
-              name="lastname"
-              required />
+              name="lastname" />
+            <div class="error-text"></div>
           </fieldset>
 
           <fieldset>
@@ -68,8 +70,8 @@
               class="main__registration__form__input"
               type="email"
               name="email"
-              id="email"
-              required />
+              id="email" />
+            <div class="error-text"></div>
           </fieldset>
 
           <fieldset>
@@ -78,8 +80,8 @@
               class="main__registration__form__input"
               type="password"
               name="password"
-              id="password"
-              required />
+              id="password" />
+            <div class="error-text"></div>
           </fieldset>
 
           <fieldset>
@@ -88,8 +90,8 @@
               class="main__registration__form__input"
               type="date"
               name="date"
-              id="date"
-              required />
+              id="date" />
+            <div class="error-text"></div>
           </fieldset>
 
           <fieldset>
@@ -97,8 +99,7 @@
             <select
               class="main__registration__form__input"
               name="pais"
-              id="pais"
-              required>
+              id="pais">
               <option value="" disabled selected>Selecciona un país</option>
               <option value="AR">Argentina</option>
               <option value="BO">Bolivia</option>
@@ -111,17 +112,20 @@
               <option value="UY">Uruguay</option>
               <option value="VE">Venezuela</option>
             </select>
+            <div class="error-text"></div>
           </fieldset>
 
-          <div></div>
-          <div>
+          <div id="terms-conditions">
             <input type="checkbox" name="terms" id="terms" />
             <label for="terms">Acepto terminos y condiciones</label>
-            <div></div>
+            <div class="error-text"></div>
           </div>
-          
-          <input type="submit" value="Registrarse" class="main__registration__form__btn btn"/>
-         
+
+          <input
+            type="submit"
+            value="Registrarse"
+            class="main__registration__form__btn btn" />
+
           <div class="main__registration__form__help">
             <a href="">¿Necesitas ayuda?</a>
           </div>
@@ -152,5 +156,6 @@
     </footer>
 
     <script src="/js/script.js"></script>
+    <script src="/js/forms_validation.js"></script>
   </body>
 </html>
