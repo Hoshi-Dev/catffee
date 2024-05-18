@@ -10,6 +10,14 @@
   --primary-color: #e6d066;
   --secondary-color: #9bb4b8;
   --acent-color: #ca8b7a;
+
+  --gap: 1rem;
+  --header-height: 6rem;
+  --footer-hight: 400px;
+
+  --card-border-radius: 0 15px 0 15px;
+
+  --card-aspect-ratio: 1000/713;
 }
 
 * {
@@ -40,8 +48,12 @@ li {
   width: 100px;
   height: 40px;
   border: none;
-  border-radius: 0 15px 0 15px;
+  border-radius: var(--card-border-radius);
   background-color: var(--primary-color);
+}
+
+.btn:hover {
+  background-color: var(--acent-color);
 }
 
 /* Grilla principal de todo el body */
@@ -51,7 +63,7 @@ li {
     "header"
     "main"
     "footer";
-  grid-template-rows: 6rem auto 400px;
+  grid-template-rows: var(--header-height) auto var(--footer-hight);
   grid-template-columns: 1fr;
   width: 100%;
 }
@@ -141,10 +153,6 @@ li {
   &:hover::after {
     width: 50%;
   }
-}
-
-.btn:hover {
-  background-color: var(--acent-color);
 }
 
 /* <--------------------CONTENIDO PRINCIPAL--------------------> */
@@ -333,47 +341,46 @@ li {
 }
 
 /* Sección de gatos de la cafetería */
+
 .main__cats {
-  grid-area: cats;
-  display: grid;
-
-  grid-template-areas:
-    "cats-title"
-    "cats-cards"
-    "3";
-
-  grid-template-columns: 1fr;
-  grid-template-rows: 6rem auto 6rem;
-  place-items: center center;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
 .main__cats__title {
-  grid-area: cats-title;
+  font-family: var(--font-title);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
 }
 
 .main__cats__cards {
-  grid-area: cats-cards;
-
   display: grid;
-  width: 80%;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 600px));
-
-  gap: 1rem;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  margin: 0 auto;
 }
+
 .main__cats__cards__item {
-  background-repeat: no-repeat;
+  background-color: var(--secondary-color);
+  border-radius: var(--card-border-radius);
   background-size: cover;
+  background-position: center;
   width: 100%;
-  aspect-ratio: 713/1000;
-  &:nth-child(1) {
-    background-image: url("../assets/images/cat-1.webp");
-  }
-  &:nth-child(2) {
-    background-image: url("../assets/images/cat-2.webp");
-  }
-  &:nth-child(3) {
-    background-image: url("../assets/images/cat-3.webp");
-  }
+
+  padding-top: calc(var(--card-aspect-ratio) * 100%);
+  position: relative;
+}
+
+.main__cats__cards__item:nth-child(1) {
+  background-image: url("../assets/images/cat-1.webp");
+}
+.main__cats__cards__item:nth-child(2) {
+  background-image: url("../assets/images/cat-2.webp");
+}
+.main__cats__cards__item:nth-child(3) {
+  background-image: url("../assets/images/cat-3.webp");
 }
 
 /* <--------------------FOOTER--------------------> */
@@ -500,8 +507,10 @@ label {
 @media (max-width: 576px) {
 }
 
-/* Media query para teléfonos pequeños en orientación landscape */
-@media (max-width: 767px) {
+@media (min-width: 665px) and (max-width: 980px) {
+  .main__cats__cards__item:nth-child(3) {
+    grid-column: span 2;
+  }
 }
 
 /* Media query para tabletas pequeñas */
@@ -549,7 +558,7 @@ label {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .main__about__cards__item {
-    grid-column: span 1;
+  .main__cats__cards {
+    width: 80%;
   }
 }
