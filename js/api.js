@@ -1,9 +1,5 @@
 
-
-
 const API_KEY = "YOUR_API_KEY"; //reemplazalo con tu api
-
-
 
 function loadImages(limit) {
     const url = `https://api.thecatapi.com/v1/images/search?limit=${limit}&has_breeds=1`;
@@ -43,16 +39,6 @@ function checkViewportAndHideImages() {
     const images = gallery.getElementsByClassName('main__api-gallery__cards__item');
 
 
-    // if (viewportWidth < 1559) {
-    //     images[images.length - 1].style.display = 'none';
-    //     images[images.length - 2].style.display = 'none';
-    // } else {
-    //     // Asegurarse de que todas las imágenes estén visibles si el viewport es mayor o igual a 2000px
-    //     for (let i = 0; i < images.length; i++) {
-    //         images[i].style.display = 'block';
-    //     }
-    // }
-
     if (viewportWidth >= 1955) {
         images[images.length - 1].style.display = 'none';
         images[images.length - 2].style.display = 'none';
@@ -66,8 +52,6 @@ function checkViewportAndHideImages() {
         images[images.length - 1].style.display = 'block';
         images[images.length - 2].style.display = 'block';
     }
-
-
 }
 
 // Cargar las primeras imágenes al cargar la página

@@ -11,7 +11,7 @@
   --secondary-color: #9bb4b8;
   --acent-color: #ca8b7a;
 
-  --gap: 1rem;
+  --gap: 1.5rem;
   --header-height: 6rem;
   --footer-hight: 400px;
 
@@ -160,7 +160,7 @@ li {
 .hidden {
   display: none;
 }
-/* <--------------------CONTENIDO PRINCIPAL--------------------> */
+/* <--------------------GRILLA DEL CONTENIDO PRINCIPAL--------------------> */
 
 .main {
   grid-area: main;
@@ -219,52 +219,33 @@ li {
 /* ABOUT */
 .main__about__cards {
   grid-area: cards;
-
   display: grid;
-  width: 90%;
-  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* grid-template-rows: repeat(2, 1fr); */
-
-  gap: 1.5rem;
+  width: 80%;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
 }
 
-.main__about__cards__item {
+.main__about__cards__item__content{
   background-color: var(--secondary-color);
-  border-radius: 0 15px 0 15px;
   padding: 2rem;
-  grid-column: span 2;
+  border-radius: var(--card-border-radius);
 }
-
-.main__about__cards__item:nth-child(2),
-.main__about__cards__item:nth-child(3) {
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-
-.main__about__cards__item:nth-child(1) {
-  order: 1;
-}
-.main__about__cards__item:nth-child(2) {
-  order: 2;
-  background-image: url("../assets/images/breakfast-tray-with-cat.webp");
-}
-.main__about__cards__item:nth-child(3) {
-  order: 3;
-  background-image: url("../assets/images/cafe-about.webp");
-}
-.main__about__cards__item:nth-child(4) {
-  order: 4;
+.main__about__cards__item {
+  width: 100%;
+  
 }
 
 .main__about__cards__item img {
   width: 100%;
+  border-radius: var(--card-border-radius);
 }
-.main__about__cards__item:nth-child(3) {
-  background-color: var(--secondary-color);
-  text-align: left;
-  order: 3;
+
+#image-one{
+  margin-top: 2rem;
+}
+
+#image-two{
+  margin-bottom: 2rem;
 }
 
 .main__about__cards__item__text {
@@ -539,6 +520,11 @@ label {
     grid-column: span 2;
   }
 }
+@media (max-width: 980px) {
+  .main__about__cards {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Media query para tabletas pequeñas */
 @media (min-width: 767px) and (max-width: 1024px) {
@@ -568,20 +554,15 @@ label {
   li {
     display: inline-block;
   }
-  .fa-solid {
-    display: none;
-  }
 }
 
 /* Media query para escritorios grandes */
 @media (max-width: 1024px) {
+  .main__about__cards,
   .main__cats__cards,
   .main__api-gallery__cards {
     width: 90%;
   }
 }
 @media (min-width: 1467px) {
-  .main__about__cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
