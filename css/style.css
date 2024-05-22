@@ -342,24 +342,32 @@ li {
 
 /* Sección de gatos de la cafetería */
 
-.main__cats {
-  padding: 2rem 1rem;
+.main__cats ,
+.main__api-gallery{
+  
   text-align: center;
+  width: 100%;
+  
 }
 
-.main__cats__title {
+.main__cats__title,
+.main__api-gallery__title {
   font-family: var(--font-title);
   font-size: 2rem;
   margin-bottom: 2rem;
   color: var(--primary-color);
 }
 
-.main__cats__cards {
+.main__cats__cards,
+.main__api-gallery__cards {
   display: grid;
   gap: var(--gap);
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
+  place-content: center center;
+  width: 80%;
   margin: 0 auto;
+  padding: 2rem 0;
 }
 
 .main__cats__cards__item {
@@ -381,6 +389,23 @@ li {
 }
 .main__cats__cards__item:nth-child(3) {
   background-image: url("../assets/images/cat-3.webp");
+  
+}
+
+/* <--------------------FOOTER--------------------> */
+
+.main__api-gallery__cards__item {
+  width: 100%;
+  height: 400px; /* ajusta según tus necesidades */
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
+.main__api-gallery__cards__item img {
+  border-radius: var(--card-border-radius);
+  width: 100%;
+  height: 100%; /* ajusta según tus necesidades */
+  object-fit: cover;
 }
 
 /* <--------------------FOOTER--------------------> */
@@ -549,8 +574,9 @@ label {
 
 /* Media query para escritorios grandes */
 @media (max-width: 1024px) {
-  .main__about__cards {
-    width: 80%;
+  .main__cats__cards,
+  .main__api-gallery__cards {
+    width: 90%;
   }
 }
 @media (min-width: 1467px) {
@@ -558,7 +584,5 @@ label {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .main__cats__cards {
-    width: 80%;
-  }
+  
 }
