@@ -116,7 +116,6 @@ li {
   width: 100%;
   padding: 1.5rem 1rem 1.5rem 0;
   text-align: center;
-  display: none;
 
   background-color: rgba(230, 208, 102, 0.2);
   backdrop-filter: blur(20px);
@@ -154,7 +153,13 @@ li {
     width: 50%;
   }
 }
+.show-menu {
+  display: block;
+}
 
+.hidden {
+  display: none;
+}
 /* <--------------------CONTENIDO PRINCIPAL--------------------> */
 
 .main {
@@ -342,12 +347,10 @@ li {
 
 /* Sección de gatos de la cafetería */
 
-.main__cats ,
-.main__api-gallery{
-  
+.main__cats,
+.main__api-gallery {
   text-align: center;
   width: 100%;
-  
 }
 
 .main__cats__title,
@@ -389,7 +392,6 @@ li {
 }
 .main__cats__cards__item:nth-child(3) {
   background-image: url("../assets/images/cat-3.webp");
-  
 }
 
 /* <--------------------FOOTER--------------------> */
@@ -566,7 +568,6 @@ label {
   li {
     display: inline-block;
   }
-
   .fa-solid {
     display: none;
   }
@@ -583,6 +584,4 @@ label {
   .main__about__cards {
     grid-template-columns: repeat(4, 1fr);
   }
-
-  
 }
