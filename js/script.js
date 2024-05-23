@@ -1,12 +1,13 @@
 
 const menuBtn = document.getElementById("js-menu-btn");
 const navbar = document.getElementById("js-header__nav");
+const imgHidden = document.getElementById("js-img-hidden");
 
 // Función para alternar el menú de navegación en modo móvil
 function toggleMenu() {
   if (menuBtn.classList.contains("fa-bars")) {
     menuBtn.classList.remove("fa-bars");
-    menuBtn.classList.add("fa-xmark"); 
+    menuBtn.classList.add("fa-xmark");
     navbar.classList.remove("hidden");
     navbar.classList.add("block");
 
@@ -15,7 +16,7 @@ function toggleMenu() {
     menuBtn.classList.add("fa-bars");
     navbar.classList.remove("block");
     navbar.classList.add("hidden");
-    
+
   }
 }
 // Agrega un event listener al botón del menú para alternar el menú al hacer clic
@@ -38,6 +39,16 @@ function handleResize() {
     navbar.classList.remove("block");
     menuBtn.classList.add("block");
     menuBtn.classList.remove("hidden");
+  }
+
+  // Mostrar/ocultar la imagen según el ancho de la ventana
+  if ((window.innerWidth >= 1560 && window.innerWidth <= 1954)
+    || (window.innerWidth >= 768 && window.innerWidth <= 1164)) {
+    imgHidden.classList.add("block");
+    imgHidden.classList.remove("hidden");
+  } else {
+    imgHidden.classList.add("hidden");
+    imgHidden.classList.remove("block");
   }
 }
 
