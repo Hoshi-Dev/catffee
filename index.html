@@ -16,22 +16,22 @@
   <header class="header">
     <div class="header__logo">
       <h1><a href="index.html">catffee</a></h1>
-
-      <i class="fa-solid fa-bars" id="js-menu-btn"></i>
+      <i class="fa-solid fa-bars hidden" id="js-menu-btn"></i>
     </div>
 
-    <nav class="header__nav" id="js-header__nav">
+    <nav class="header__nav" id="js-header-nav">
       <ul class="header__nav__list">
-        <li class="header__nav__list__item"><a href="">Sobre nosotros</a></li>
-        <li class="header__nav__list__item"><a href="">Menú</a></li>
+        <li class="header__nav__list__item"><a href="#main-about">Sobre nosotros</a></li>
+        <li class="header__nav__list__item"><a href="#main-menu">Menú</a></li>
         <li class="header__nav__list__item">
-          <a href="">Las estrellas de catffee</a>
+          <a href="#main-cats">Las estrellas de catffee</a>
         </li>
         <li class="header__nav__list__item">
           <a href="./pages/login.html">Iniciar Sesión</a>
         </li>
         <li class="header__nav__list__item">
-          <a href="./pages/registration.html"><button class="btn">Registrarse</button></a>
+          <a href="./pages/registration.html">
+            <button class="btn">Registrarse</button></a>
         </li>
       </ul>
     </nav>
@@ -41,12 +41,12 @@
     <section class="main__hero">
       <h1 class="main__hero__title">catffee</h1>
     </section>
-  
+
     <!--------------------------------------------------- ABOUT/SOBRE NOSOTROS --------------------------------------------------------->
-    <section class="main__about">      
+    <section class="main__about" id="main-about">
       <div class="main__about__cards">
         <article class="main__about__cards__item">
-          <div class="main__about__cards__item__content" >
+          <div class="main__about__cards__item__content">
             <h3 class="main__about__cards__item__title">Una cafetería</h3>
             <p class="main__about__cards__item__text">
               Con una atmósfera elegante y acogedora, Catffee es mucho más que
@@ -62,11 +62,12 @@
               nuestros felinos residentes.
             </p>
           </div>
-          <img src="assets/images/breakfast-tray-with-cat.webp" alt="Gato con bandeja de desayuno" id="image-one" loading="lazy"/>
+          <img src="assets/images/breakfast-tray-with-cat.webp" alt="Gato con bandeja de desayuno" id="image-one"
+            loading="lazy" />
         </article>
 
         <article class="main__about__cards__item">
-          <img src="assets/images/cafe-about.webp" alt="Café sobre la mesa" id="image-two" loading="lazy"/>
+          <img src="assets/images/cafe-about.webp" alt="Café sobre la mesa" id="image-two" loading="lazy" />
           <div class="main__about__cards__item__content">
             <h3 class="main__about__cards__item__title">
               Mucho instinto felino
@@ -84,14 +85,17 @@
             <p class="main__about__cards__item__text">
               Tenemos muchos benedicios para vos.
             </p>
-            <a href="./pages/registration.html"><button class="main__about__cards__item__btn">
-                Registrate
+            <a href="./pages/registration.html"><button class="main__about__cards__item__btn btn">
+                Registrarse
               </button></a>
           </div>
         </article>
     </section>
 
-    <section class="main__menu">
+
+    <!--------------------------------------------------- MENU --------------------------------------------------------->
+
+    <section class="main__menu" id="main-menu">
       <h2 class="main__menu__title">Variété de café</h2>
 
       <div class="main__menu__cards">
@@ -130,25 +134,39 @@
         <div class="main__menu__cards__item">
           <img src="/assets/images/9.webp" alt="" loading="lazy">
         </div>
-       
-        <div class="main__menu__cards__item hidden" id="js-img-hidden" loading="lazy">
-          <img src="/assets/images/10.webp" alt="">
+
+        <div class="main__menu__cards__item" id="js-img-hidden-one">
+          <img src="/assets/images/10.webp" alt="" loading="lazy">
+        </div>
+
+
+        <div class="main__menu__cards__item hidden" id="js-img-hidden-two">
+          <img src="/assets/images/11.webp" alt="" loading="lazy">
+        </div>
+
+
+        <div class="main__menu__cards__item hidden" id="js-img-hidden-three">
+          <img src="/assets/images/12.webp" alt="" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section class="main__cats">
-      <h2 class="main__cats__title">Nuestras estrellas</h2>
+
+    <!--------------------------------------------------- MAIN CATS/NUESTRAS ESTRELLAS --------------------------------------------------------->
+
+    <section class="main__cats" id="main-cats">
+      <h2 class="main__cats__title">nuestras estrellas</h2>
 
       <div class="main__cats__cards">
-        <div class="main__cats__cards__item"></div>
-        <div class="main__cats__cards__item"></div>
-        <div class="main__cats__cards__item"></div>
+        <a href="/pages/cat_detail.html?cat=0" class="main__cats__cards__item" id="js-cat-one"></a>
+        <a href="/pages/cat_detail.html?cat=1" class="main__cats__cards__item" id="js-cat-two"></a>
+        <a href="/pages/cat_detail.html?cat=2" class="main__cats__cards__item" id="js-cat-three"></a>
       </div>
     </section>
+    <!--------------------------------------------------- MAIN CATS/NUESTRAS ESTRELLAS --------------------------------------------------------->
 
     <section class="main__api-gallery">
-      <h2 class="main__api-gallery__title">titulo</h2>
+      <h2 class="main__api-gallery__title">envianos tus fotos</h2>
       <div class="main__api-gallery__cards" id="js-main__api-gallery__cards"></div>
     </section>
   </main>
