@@ -506,17 +506,26 @@ body:not(.login-page):not(.registration-page) .main {
   font-size: 6.5rem;
   opacity: 0.3;
 }
+
 .main__api-gallery__cards__item {
   width: 100%;
-  height: 400px; /* ajusta según tus necesidades */
+  height: 400px; 
   overflow: hidden;
   aspect-ratio: 1/1;
+  border-radius: var(--card-border-radius);
+}
+.main__api-gallery__cards__item img{
+  transition: 1.1s ease;
+  
+}
+.main__api-gallery__cards__item img:hover{
+  transform: scale(1.1);
 }
 
 .main__api-gallery__cards__item img {
   border-radius: var(--card-border-radius);
   width: 100%;
-  height: 100%; /* ajusta según tus necesidades */
+  height: 100%; 
   object-fit: cover;
 }
 
