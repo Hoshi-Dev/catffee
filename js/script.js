@@ -35,8 +35,8 @@ function handleResize() {
     if (window.innerWidth >= 1024) {
       navbar.classList.add("block");
       navbar.classList.remove("hidden");
-      menuBtn.classList.add("hidden");
-      menuBtn.classList.remove("block");
+      
+      menuBtn.style.display = "none";
       // Se asegura que el icono de menú se resetee para la vista de pantalla completa
       if (menuBtn.classList.contains("fa-xmark")) {
         menuBtn.classList.remove("fa-xmark");
@@ -45,8 +45,9 @@ function handleResize() {
     } else {
       navbar.classList.add("hidden");
       navbar.classList.remove("block");
-      menuBtn.classList.add("block");
-      menuBtn.classList.remove("hidden");
+      
+      menuBtn.style.display="block"
+      
     }
   }
 

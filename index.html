@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/style.css" />
   <!-- fontawsome -->
   <script src="https://kit.fontawesome.com/34bac4efbb.js" crossorigin="anonymous"></script>
+  <!-- aos animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>catffee || Café de especialidad</title>
 </head>
 
@@ -16,7 +18,7 @@
   <header class="header">
     <div class="header__logo">
       <h1><a href="index.html">catffee</a></h1>
-      <i class="fa-solid fa-bars hidden" id="js-menu-btn"></i>
+      <i class="fa-solid fa-bars" id="js-menu-btn"></i>
     </div>
 
     <nav class="header__nav" id="js-header-nav">
@@ -46,7 +48,7 @@
     <section class="main__about" id="main-about">
       <div class="main__about__cards">
         <article class="main__about__cards__item">
-          <div class="main__about__cards__item__content">
+          <div class="main__about__cards__item__content" data-aos="fade-right">
             <h3 class="main__about__cards__item__title">Una cafetería</h3>
             <p class="main__about__cards__item__text">
               Con una atmósfera elegante y acogedora, Catffee es mucho más que
@@ -62,13 +64,14 @@
               nuestros felinos residentes.
             </p>
           </div>
-          <img src="assets/images/breakfast-tray-with-cat.webp" alt="Gato con bandeja de desayuno" id="image-one"
-            loading="lazy" />
+          <img class="zoom" src="assets/images/breakfast-tray-with-cat.webp" alt="Gato con bandeja de desayuno"  id="image-one"
+            loading="lazy" data-aos="fade-right" data-aos-offset="50" data-aos-duration="2000" />
         </article>
 
-        <article class="main__about__cards__item">
-          <img src="assets/images/cafe-about.webp" alt="Café sobre la mesa" id="image-two" loading="lazy" />
-          <div class="main__about__cards__item__content">
+        <article class="main__about__cards__item" data-aos="fade-left">
+          <img src="assets/images/cafe-about.webp" alt="Café sobre la mesa" id="image-two" loading="lazy"
+            data-aos="fade-left" data-aos-offset="50" data-aos-duration="2000" />
+          <div class="main__about__cards__item__content" data-aos="fade-left" data-aos-delay="1100">
             <h3 class="main__about__cards__item__title">
               Mucho instinto felino
             </h3>
@@ -98,7 +101,7 @@
     <section class="main__menu" id="main-menu">
       <h2 class="main__menu__title">Variété de café</h2>
 
-      <div class="main__menu__cards">
+      <div class="main__menu__cards" data-aos="fade-up" data-aos-duration="1500">
         <div class="main__menu__cards__item">
           <img src="/assets/images/1.webp" alt="" loading="lazy">
         </div>
@@ -139,11 +142,9 @@
           <img src="/assets/images/10.webp" alt="" loading="lazy">
         </div>
 
-
         <div class="main__menu__cards__item hidden" id="js-img-hidden-two">
           <img src="/assets/images/11.webp" alt="" loading="lazy">
         </div>
-
 
         <div class="main__menu__cards__item hidden" id="js-img-hidden-three">
           <img src="/assets/images/12.webp" alt="" loading="lazy">
@@ -157,12 +158,25 @@
     <section class="main__cats" id="main-cats">
       <h2 class="main__cats__title">nuestras estrellas</h2>
 
-      <div class="main__cats__cards">
-        <a href="/pages/cat_detail.html?cat=0" class="main__cats__cards__item" id="js-cat-one"></a>
-        <a href="/pages/cat_detail.html?cat=1" class="main__cats__cards__item" id="js-cat-two"></a>
-        <a href="/pages/cat_detail.html?cat=2" class="main__cats__cards__item" id="js-cat-three"></a>
+      <div class="main__cats__cards" data-aos="fade-up">
+        <a href="/pages/cat_detail.html?cat=0" class="main__cats__cards__item" id="js-cat-one">
+          <div class="main__cats__cards__item__caption">
+            <h3>Conóceme</h3>
+          </div>
+        </a>
+        <a href="/pages/cat_detail.html?cat=1" class="main__cats__cards__item" id="js-cat-two">
+          <div class="main__cats__cards__item__caption">
+            <h3>Conóceme</h3>
+          </div>
+        </a>
+        <a href="/pages/cat_detail.html?cat=2" class="main__cats__cards__item" id="js-cat-three">
+          <div class="main__cats__cards__item__caption">
+            <h3>Conóceme</h3>
+          </div>
+        </a>
       </div>
     </section>
+
     <!--------------------------------------------------- MAIN CATS/NUESTRAS ESTRELLAS --------------------------------------------------------->
 
     <section class="main__api-gallery">
@@ -193,7 +207,12 @@
   </footer>
 
   <script src="/js/script.js"></script>
-  <!-- <script src="/js/api.js"></script> -->
+  <script src="/js/api.js"></script>
+  <!-- aos animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

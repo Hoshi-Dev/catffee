@@ -1,5 +1,6 @@
 
-const API_KEY = "YOUR_API_KEY"; //reemplazalo con tu api
+import API_KEY from './api_key.js'; // Importar la clave API desde el archivo generado
+
 
 function loadImages(limit) {
     const url = `https://api.thecatapi.com/v1/images/search?limit=${limit}&has_breeds=1`;
