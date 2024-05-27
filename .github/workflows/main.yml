@@ -33,7 +33,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'  # Asegúrate de que la ruta sea correcta y apunta al directorio raíz
+          path: './'  # Asegúrate de que la ruta sea correcta y apunta al directorio raíz
 
       - name: Deploy to GitHub Pages
         id: deployment
