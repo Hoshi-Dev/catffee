@@ -170,10 +170,6 @@ li {
   width: 50%;
 }
 
-.show-menu {
-  display: block;
-}
-
 /* <--------------------GRILLA DEL CONTENIDO PRINCIPAL--------------------> */
 
 body:not(.login-page):not(.registration-page) .main {
@@ -722,6 +718,9 @@ label {
   li {
     display: inline-block;
   }
+  .detail-page #js-menu-btn{
+    display: none;
+  }
 }
 
 /* Media query para escritorios grandes */
@@ -733,4 +732,5 @@ label {
   .main__detail {
     width: 90%;
   }
+  
 }
