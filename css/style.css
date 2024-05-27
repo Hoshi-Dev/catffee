@@ -577,12 +577,12 @@ body.registration-page .main{
 }
 
 .main__login{
-  background-image: url("./assets/images/login-bg.webp");
+  background-image: url("../assets/images/login-bg.webp");
   
 }
 
 .main__registration{
-  background-image: url("./assets/images/registration-bg.webp");
+  background-image: url("../assets/images/registration-bg.webp");
 }
 
 label {
