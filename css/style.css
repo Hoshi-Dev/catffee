@@ -10,13 +10,10 @@
   --primary-color: #e6d066;
   --secondary-color: #9bb4b8;
   --acent-color: #ca8b7a;
-
   --gap: 1.5rem;
   --header-height: 6rem;
   --footer-hight: 200px;
-
   --card-border-radius: 0 15px 0 15px;
-
   --card-aspect-ratio: 1000/713;
 }
 
@@ -81,7 +78,7 @@ li {
   width: 100%;
 }
 
-/* HEADER CONTENT */
+/* ----------------------------HEADER---------------------------- */
 .header {
   grid-area: header;
   width: 100%;
@@ -111,7 +108,6 @@ li {
   cursor: pointer;
   position: relative;
   z-index: 2;
-  
 }
 
 .fa-solid:hover::after {
@@ -170,7 +166,7 @@ li {
   width: 50%;
 }
 
-/* <--------------------GRILLA DEL CONTENIDO PRINCIPAL--------------------> */
+/* <--------------------MAIN GRID/GRILLA DEL CONTENIDO PRINCIPAL--------------------> */
 
 body:not(.login-page):not(.registration-page) .main {
   grid-area: main;
@@ -353,7 +349,6 @@ body:not(.login-page):not(.registration-page) .main {
   position: absolute;
   z-index: -1;
   font-size: 6.5rem;
-
   top: -60px;
   opacity: 0.3;
 }
@@ -377,7 +372,6 @@ body:not(.login-page):not(.registration-page) .main {
   background-size: cover;
   background-position: center;
   width: 100%;
-
   padding-top: calc(var(--card-aspect-ratio) * 100%);
   position: relative;
 }
@@ -415,12 +409,12 @@ body:not(.login-page):not(.registration-page) .main {
 }
 
 /* <--------------------CAT DETAIL--------------------> */
+
 .main__detail {
   display: grid;
   grid-template-columns: 350px auto;
   grid-template-rows: auto 1fr;
   gap: var(--gap);
-
   width: 80%;
   margin: 4rem auto;
 }
@@ -464,6 +458,7 @@ body:not(.login-page):not(.registration-page) .main {
 .main__detail__content__text {
   margin: 1rem 0;
 }
+
 .main__detail__content__text span {
   font-weight: bold;
 }
@@ -481,7 +476,9 @@ body:not(.login-page):not(.registration-page) .main {
 .main__detail__content__btn button:hover {
   background-color: var(--secondary-color);
 }
+
 /* <--------------------API GALLERY--------------------> */
+
 .main__api-gallery__title {
   text-align: center;
   font-size: 2rem;
@@ -505,23 +502,24 @@ body:not(.login-page):not(.registration-page) .main {
 
 .main__api-gallery__cards__item {
   width: 100%;
-  height: 400px; 
+  height: 400px;
   overflow: hidden;
   aspect-ratio: 1/1;
   border-radius: var(--card-border-radius);
 }
-.main__api-gallery__cards__item img{
+
+.main__api-gallery__cards__item img {
   transition: 1.1s ease;
-  
 }
-.main__api-gallery__cards__item img:hover{
+
+.main__api-gallery__cards__item img:hover {
   transform: scale(1.1);
 }
 
 .main__api-gallery__cards__item img {
   border-radius: var(--card-border-radius);
   width: 100%;
-  height: 100%; 
+  height: 100%;
   object-fit: cover;
 }
 
@@ -529,11 +527,9 @@ body:not(.login-page):not(.registration-page) .main {
 
 .footer {
   grid-area: footer;
-
   background-color: var(--secondary-color);
   padding: 2rem;
   display: flex;
-
   justify-content: space-between;
   align-items: center;
   text-shadow: var(--text-color) 2px 2px 5px;
@@ -559,34 +555,32 @@ body:not(.login-page):not(.registration-page) .main {
 .footer__nav__list__item .btn {
   width: 200px;
 }
+
 /* <--------------------REGISTRATION PAGE--------------------> */
+
 body.login-page .main,
-body.registration-page .main{
+body.registration-page .main {
   grid-area: main;
-  
-    text-align: center;
-  
+  text-align: center;
 }
+
 .main__registration,
 .main__login {
-  display: flex;  
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   padding: 3rem 0;
-  
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
-.main__login{
+.main__login {
   background-image: url("../assets/images/login-bg.webp");
-  
 }
 
-.main__registration{
+.main__registration {
   background-image: url("../assets/images/registration-bg.webp");
 }
 
@@ -603,6 +597,7 @@ label {
   background-color: var(--acent-color);
   border-radius: 0 8px 0 8px;
 }
+
 .main__registration__form,
 .main__login__form {
   width: 80%;
@@ -642,6 +637,7 @@ label {
 .error:focus {
   outline-color: var(--acent-color);
 }
+
 .main__registration__form__title,
 .main__login__form__title {
   font-family: var(--font-title);
@@ -662,9 +658,9 @@ label {
   display: flex;
   justify-content: space-evenly;
 }
+
 /* <--------------------MEDIA QUERYS--------------------> */
 
-/* Media query para tabletas pequeñas */
 @media (max-width: 767px) {
   .main__menu__cards__item:nth-child(1),
   .main__menu__cards__item:nth-child(6) {
@@ -694,7 +690,6 @@ label {
   }
 }
 
-/* Media query para computadoras portátiles y escritorios pequeños */
 @media (min-width: 1024px) {
   .header {
     flex-direction: row;
@@ -702,15 +697,18 @@ label {
     height: 6rem;
     background-color: var(--bg-color);
   }
+
   .header__logo {
     width: unset;
   }
+
   .header__nav {
     display: inline-flex;
     width: unset;
     background-color: transparent;
     backdrop-filter: none;
   }
+
   .header__nav__list {
     width: unset;
   }
@@ -718,12 +716,8 @@ label {
   li {
     display: inline-block;
   }
-  .detail-page #js-menu-btn{
-    display: none;
-  }
 }
 
-/* Media query para escritorios grandes */
 @media (max-width: 1024px) {
   .main__about__cards,
   .main__menu__cards,
@@ -732,5 +726,4 @@ label {
   .main__detail {
     width: 90%;
   }
-  
 }

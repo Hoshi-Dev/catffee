@@ -21,13 +21,13 @@ function toggleMenu() {
 
   }
 }
+
 // Agrega un event listener al botón del menú para alternar el menú al hacer clic
 //Se agregan comporbaciones de existencia de elementos, para no provocar errores en consola
 //cuando se esta en otra página
 if (menuBtn && navbar) {
   menuBtn.addEventListener("click", toggleMenu);
 }
-
 
 //Maneja la redimención de pantalla pantalla, para asegurarse de que los elementos se muestren o no
 function handleResize() {
@@ -50,7 +50,6 @@ function handleResize() {
       
     }
   }
-
 
   // Mostrar/ocultar las imágenes según el ancho de la ventana
   if (imgHiddenOne && imgHiddenTwo && imgHiddenThree) {
