@@ -488,7 +488,7 @@ body:not(.login-page):not(.registration-page) .main {
 }
 
 .main__api-gallery__title::after {
-  content: "tus fotos";
+  content: "gallery";
   font-family: var(--font-title);
   color: var(--primary-color);
   position: absolute;
